@@ -41,7 +41,7 @@ const Signup = () => {
                     {({handleChange, handleBlur, handleSubmit, values}) => (
                     <StyledFormArea>
                         <MyTextInput
-                            label="Email Address"
+                            label="Full Name"
                             placeholder="fucku@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
@@ -61,7 +61,7 @@ const Signup = () => {
                         />
 
                         <MyTextInput
-                            label="Email Address"
+                            label="Date of Birth"
                             placeholder="fucku@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}

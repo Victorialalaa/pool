@@ -25,7 +25,7 @@ import {View} from 'react-native';
 //colors
 const {brand, darkLight} = Colors;
 
-const Login = () => {
+const Login = ({navigation}) => {
     return (
         <StyledContainer>
             <InnerContainer>
@@ -36,6 +36,7 @@ const Login = () => {
                     initialValues={{email: '', password: ''}}
                     onSubmit={(values) => {
                         console.log(values);
+                        navigation.navigate("Welcome");
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values}) => (
@@ -67,7 +68,7 @@ const Login = () => {
                         </StyledButton>
                         <ExtraView>
                             <ExtraText>Don't have an account already? </ExtraText>
-                            <TextLink>
+                            <TextLink on Press={() => navigation.naviage('Signup')}>
                                 <TextLinkContent>Signup</TextLinkContent>
                             </TextLink>
                         </ExtraView>
