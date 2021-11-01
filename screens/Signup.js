@@ -25,24 +25,24 @@ import {View} from 'react-native';
 //colors
 const {brand, darkLight} = Colors;
 
-const Signup = () => {
+const Signup = ({navigation}) => {
     return (
         <StyledContainer>
             <InnerContainer>
-                <PageTitle>Pool App</PageTitle>
-                <SubTitle>Account Signup</SubTitle>
+                <PageTitle>Account Signup</PageTitle>
 
                 <Formik
                     initialValues={{email: '', password: ''}}
                     onSubmit={(values) => {
                         console.log(values);
+                        navigation.navigate("Welcome");
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values}) => (
                     <StyledFormArea>
                         <MyTextInput
                             label="Full Name"
-                            placeholder="fucku@gmail.com"
+                            placeholder="Jack Lee is Love he is life"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
@@ -52,7 +52,7 @@ const Signup = () => {
 
                         <MyTextInput
                             label="Email Address"
-                            placeholder="fucku@gmail.com"
+                            placeholder="@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
@@ -62,7 +62,7 @@ const Signup = () => {
 
                         <MyTextInput
                             label="Date of Birth"
-                            placeholder="fucku@gmail.com"
+                            placeholder="@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
@@ -94,13 +94,13 @@ const Signup = () => {
 
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>
-                                Login
+                                Sign Up
                             </ButtonText>
                         </StyledButton>
                         <ExtraView>
                             <ExtraText>Already have an account? </ExtraText>
-                            <TextLink>
-                                <TextLinkContent>Signup</TextLinkContent>
+                            <TextLink onPress={() => navigation.navigate("Login")}>
+                                <TextLinkContent>Login</TextLinkContent>
                             </TextLink>
                         </ExtraView>
                     </StyledFormArea>

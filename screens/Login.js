@@ -43,7 +43,7 @@ const Login = ({navigation}) => {
                     <StyledFormArea>
                         <MyTextInput
                             label="Email Address"
-                            placeholder="fucku@gmail.com"
+                            placeholder="@gmail.com"
                             placeholderTextColor={darkLight}
                             onChangeText={handleChange('email')}
                             onBlur={handleBlur('email')}
@@ -68,7 +68,7 @@ const Login = ({navigation}) => {
                         </StyledButton>
                         <ExtraView>
                             <ExtraText>Don't have an account already? </ExtraText>
-                            <TextLink on Press={() => navigation.naviage('Signup')}>
+                            <TextLink onPress={() => navigation.navigate("Signup")}>
                                 <TextLinkContent>Signup</TextLinkContent>
                             </TextLink>
                         </ExtraView>
