@@ -25,8 +25,12 @@ import {View} from 'react-native';
 //colors
 const {brand, darkLight} = Colors;
 
+// keyboard avoiding view
+import KeyboardAvoidingWrapper from './../components/KeyboardAvoidingWrapper';
+
 const Signup = ({navigation}) => {
     return (
+        <KeyboardAvoidingWrapper>
         <StyledContainer>
             <InnerContainer>
                 <PageTitle>Account Signup</PageTitle>
@@ -108,6 +112,7 @@ const Signup = ({navigation}) => {
                 </Formik>
             </InnerContainer>
         </StyledContainer>
+        </KeyboardAvoidingWrapper>
     );
 };
 

@@ -25,8 +25,12 @@ import {View} from 'react-native';
 //colors
 const {brand, darkLight} = Colors;
 
+// keyboard avoiding view
+import KeyboardAvoidingWrapper from './../components/KeyboardAvoidingWrapper';
+
 const Login = ({navigation}) => {
     return (
+        <KeyboardAvoidingWrapper>
         <StyledContainer>
             <InnerContainer>
                 <PageTitle>Pool App</PageTitle>
@@ -61,6 +65,7 @@ const Login = ({navigation}) => {
                             secureTextEntry={true}
                             isPassword={true}
                         />
+                        
                         <StyledButton onPress={handleSubmit}>
                             <ButtonText>
                                 Login
@@ -77,6 +82,7 @@ const Login = ({navigation}) => {
                 </Formik>
             </InnerContainer>
         </StyledContainer>
+        </KeyboardAvoidingWrapper>
     );
 };
 
