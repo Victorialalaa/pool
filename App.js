@@ -1,10 +1,10 @@
 import React from 'react';
 
-import RootStack from './navigators/RootStack';
-//import chemicalLevel from './screens/chemicalLevel';
+//import RootStack from './navigators/RootStack';
+import ChemicalLevel from './screens/ChemicalLevel';
 
 export default function App() {
-  return <RootStack />;
+  return <ChemicalLevel />;
 }
 
 

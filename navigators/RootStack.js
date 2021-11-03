@@ -10,6 +10,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Login from './../screens/Login';
 import Signup from './../screens/Signup';
 import Welcome from './../screens/Welcome';
+import ChemicalLevel from './../screens/ChemicalLevel';
 
 const Stack = createStackNavigator();
 
