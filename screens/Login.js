@@ -40,7 +40,7 @@ const Login = ({navigation}) => {
                     initialValues={{email: '', password: ''}}
                     onSubmit={(values) => {
                         console.log(values);
-                        navigation.navigate("Welcome");
+                        navigation.navigate("MainContainer");
                     }}
                 >
                     {({handleChange, handleBlur, handleSubmit, values}) => (

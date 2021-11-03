@@ -5,16 +5,19 @@ const {primary, tertiary} = Colors;
 
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import { createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
 //screens
 import Login from './../screens/Login';
 import Signup from './../screens/Signup';
+import MainContainer from './../mainNavigation/mainScreens/MainContainer';
+import HomeScreen from './../mainNavigation/mainScreens/HomeScreen';
 
 const Stack = createStackNavigator();
 
 const RootStack = () => {
     return(
-        <NavigationContainer>
+        <NavigationContainer independent={true}>
             <Stack.Navigator
                 screenOptions={{
                     headerStyle: {
@@ -31,7 +34,7 @@ const RootStack = () => {
             >
                 <Stack.Screen name="Login" component={Login} />
                 <Stack.Screen name="Signup" component={Signup} />
-                <Stack.Screen name="Welcome" component={Welcome} />
+                <Stack.Screen name="MainContainer" component={MainContainer} />
             </Stack.Navigator>
         </NavigationContainer>
     )
