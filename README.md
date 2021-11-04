@@ -16,6 +16,10 @@ native navigation install:
 sliders:
 - yarn add @react-native-community/slider
 
+icons:
+- yarn add @expo/vector-icons
+- yarn add react-native-ionicons@^4.x
+
 teehee :>
 
 
