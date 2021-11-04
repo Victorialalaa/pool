@@ -94,13 +94,6 @@ export const MsgBox = styled.Text`
     font-size: 13px;
 `;
 
-export const Line = styled.View`
-    height: 1px;
-    width: 100%;
-    background-color: ${darkLight};
-    margin-vertical: 10px;
-`;
-
 export const ExtraView = styled.View`
     justify-content: center;
     flex-direction: row;
