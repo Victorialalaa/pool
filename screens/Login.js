@@ -34,11 +34,13 @@ const { brand, darkLight } = Colors;
 import KeyboardAvoidingWrapper from "./../components/KeyboardAvoidingWrapper";
 
 const Login = ({ navigation }) => {
+  const [hidePassword, setHidePassword] = useState(true);
+
   return (
     <KeyboardAvoidingWrapper>
       <StyledContainer>
         <InnerContainer>
-          <PageTitle>Pool App</PageTitle>
+          <PageTitle>Ur mom!</PageTitle>
           <SubTitle>Account Login</SubTitle>
 
           <Formik
@@ -64,13 +66,15 @@ const Login = ({ navigation }) => {
                 <MyTextInput
                   label="Password"
                   icon="key-outline"
-                  placeholder="shhhhhhh"
+                  placeholder="* * * * * *"
                   placeholderTextColor={darkLight}
                   onChangeText={handleChange("password")}
                   onBlur={handleBlur("password")}
                   values={values.password}
-                  secureTextEntry={true}
+                  secureTextEntry={hidePassword}
                   isPassword={true}
+                  hidePassword={hidePassword}
+                  setHidePassword={setHidePassword}
                 />
 
                 <StyledButton onPress={handleSubmit}>
@@ -91,7 +95,7 @@ const Login = ({ navigation }) => {
   );
 };
 
-const MyTextInput = ({ label, icon, ...props }) => {
+const MyTextInput = ({ label, icon, isPassword, hidePassword, setHidePassword, ...props }) => {
   return (
     <View>
         <LeftIcon>
@@ -99,6 +103,11 @@ const MyTextInput = ({ label, icon, ...props }) => {
         </LeftIcon>
       <StyledInputLabel>{label}</StyledInputLabel>
       <StyledTextInput {...props} />
+      {isPassword && (
+        <RightIcon onPress={() => setHidePassword(!hidePassword)}>
+          <Ionicons name = {hidePassword ? "eye-off-outline" : "eye-outline"} size={30} colors={darkLight}/>
+        </RightIcon>
+      )}
     </View>
   );
 };
