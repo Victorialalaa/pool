@@ -124,3 +124,17 @@ export const TextLinkContent = styled.Text`
     color: ${brand};
     font-size: 15px;
 `;
+
+export const LeftIcon = styled.View`
+    left: 15px;
+    top: 38px;
+    position: absolute;
+    z-index: 1;
+`;
+
+export const RightIcon = styled.View`
+    left: 15px;
+    top: 38px;
+    position: absolute;
+    z-index: 1;
+`;
