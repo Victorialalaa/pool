@@ -7,5 +7,5 @@ function App(){
     <RootStack/>
   );
 }
-
+//hi baby <3
 export default App;
