@@ -1,12 +1,14 @@
 # pool
 pool
 
-Need to install android and ios emulator
+Android Studio: https://developer.android.com/studio
+Xcode: https://xcodereleases.com/
 
 PACKAGES TO INSTALL:
 - node.js (contains npm package manager)
 - install expo "npm install --global expo-cli"
 - install yarn "npm install --global yarn"
+
 - install formik
 
 native navigation install:
