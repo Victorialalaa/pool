@@ -4,8 +4,9 @@ pool
 Need to install android and ios emulator
 
 PACKAGES TO INSTALL:
-- node.js
-- install expo
+- node.js (contains npm package manager)
+- install expo "npm install --global expo-cli"
+- install yarn "npm install --global yarn"
 - install formik
 
 native navigation install:
@@ -14,11 +15,11 @@ native navigation install:
 - yarn add @react-navigation/native-stack
 
 sliders:
-- yarn add @react-native-community/slider
+- "yarn add @react-native-community/slider"
 
 icons:
-- yarn add @expo/vector-icons
-- yarn add react-native-ionicons@^4.x
+- "yarn add @expo/vector-icons"
+- "yarn add react-native-ionicons@^4.x"
 
 teehee :>
 
