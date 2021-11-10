@@ -7,5 +7,5 @@ function App(){
     <RootStack/>
   );
 }
-//hi baby <3
+//hi baby <3 ily jack
 export default App;
